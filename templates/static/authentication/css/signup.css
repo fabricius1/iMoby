@@ -83,15 +83,15 @@ h2 {
 }
 
 .input_cadastrar_nome {
-    background-image: url('/static/autenticacao/img/user.png');
+    background-image: url('/static/authentication/img/user.png');
 }
 
 .input_cadastrar_email {
-    background-image: url('/static/autenticacao/img/email.png');
+    background-image: url('/static/authentication/img/email.png');
 }
 
 .input_cadastrar_senha {
-    background-image: url('/static/autenticacao/img/senha.png');
+    background-image: url('/static/authentication/img/senha.png');
 }
 
 .btn_cadastrar {
