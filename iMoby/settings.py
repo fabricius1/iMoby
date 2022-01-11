@@ -1,7 +1,7 @@
 from django.contrib.messages import constants
 from dj_database_url import parse as dburl
 from pathlib import Path
-from decouple import config
+from decouple import config, Csv
 import os
 
 
@@ -17,10 +17,8 @@ SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
-DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='', cast=Csv())
 
 # Application definition
 
