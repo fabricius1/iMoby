@@ -4,6 +4,10 @@ h2 {
 }
 */
 
+html {
+    zoom: 90%;
+}
+
 .sidebar {
     background-color: #30CD9E;
     height: 100vh;

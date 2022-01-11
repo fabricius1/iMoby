@@ -5,36 +5,39 @@
 <link rel="stylesheet" href="{% static 'authentication/css/signup.css' %}">
 {% endblock %}
 
-{% block 'titulo' %}
-Sign Up!
+{% block 'title' %}
+Sign Up! - iMobi
 {% endblock %}
 
 {% block 'body' %}
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-3 sidebar">
+            
             <div class="logo_sidebar">
                 <h2 class="logo">
                     <img class="img_logo_sidebar" src="{% static 'authentication/img/logo.png' %}">IMOBI
                 </h2>
             </div>
+            
             <div class="corpo_sidebar">
                 <div>
-                    <h2 class="titulo cor_branca">Cadastre-se</h2>
+                    <h2 class="titulo cor_branca">Sign Up</h2>
                 </div>
                 <div>
-                    <p class="cor_branca descricao">As melhores casas</p>
-                    <p style="margin-top:-20px" class="cor_branca descricao">Nos melhores preços</p>
+                    <br>
+                    <p class="cor_branca descricao">The best houses</p>
+                    <p style="margin-top:-20px" class="cor_branca descricao">The best prices</p>
                     <br>
                     <br>
-                    <a class="btn_logar" href="{% url 'login' %}">LOGAR</a>
+                    <a class="btn_logar" href="{% url 'login' %}">LOGIN</a>
                 </div>
             </div>
         </div>
         <div class="col-md-9">
             <div class="area_cadastrar">
                 <form action="{% url 'signup' %}" method="POST">{% csrf_token %}
-                    <h2 class="titulo_area_cadastrar">Cadastre-se</h2>
+                    <h2 class="titulo_area_cadastrar">Sign Up</h2>
                     <br>
                     
                     {% if messages %}
@@ -53,7 +56,7 @@ Sign Up!
                     <br>
                     <input name="password" class="input_cadastrar input_cadastrar_senha" type="password" placeholder="Password...">
                     <br>
-                    <input class="btn_cadastrar" type="submit" value="Cadastrar">
+                    <input class="btn_cadastrar" type="submit" value="Sign Up">
                 </form>
             </div>
         </div>

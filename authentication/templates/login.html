@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block 'head' %}
-<link rel="stylesheet" href="{% static 'authentication/css/signup.css' %}" />
+<link rel="stylesheet" href="{% static 'authentication/css/signup.css' %}">
 {% endblock %}
 
 {% block 'title' %}
-Login
+Login - iMobi
 {% endblock %}
 
 {% block 'body' %}
@@ -16,23 +16,21 @@ Login
         <div class="col-md-3 sidebar">
             <div class="logo_sidebar">
                 <h2 class="logo">
-                    <img
-                        class="img_logo_sidebar"
-                        src="{% static 'authentication/img/logo.png' %}"
-                    />
-                    IMOBI
+                    <img class="img_logo_sidebar" src="{% static 'authentication/img/logo.png' %}">IMOBI
                 </h2>
             </div>
+            
             <div class="corpo_sidebar">
                 <div>
                     <h2 class="titulo cor_branca">Login</h2>
                 </div>
                 <div>
+                    <br>
                     <p class="cor_branca descricao">The best houses</p>
-                    <p style="margin-top:-20px" class="cor_branca descricao">With the best prices</p>
+                    <p style="margin-top:-20px" class="cor_branca descricao">The best prices</p>
                     <br>
                     <br>
-                    <a class="btn_logar" href="{% url 'signup' %}">Sign Up</a>
+                    <a class="btn_logar" href="{% url 'signup' %}">SIGN UP</a>
                 </div>
             </div>
         </div>
@@ -62,4 +60,4 @@ Login
     </div>
 </div>
 
-{% endblock %}
+{% endblock 'body'%}

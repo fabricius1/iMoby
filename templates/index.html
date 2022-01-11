@@ -9,23 +9,44 @@
         text-align: center;
         color: dark-grey;
     }
+
+    input {
+        background-color: #fff;
+        padding: 10px 20px;
+        border-radius: 10px;
+        border-color: #212529;
+    }
 </style>
 {% endblock %}
 
 {% block 'title' %}
-Home is here!
+iMobi - Home
 {% endblock %}
 
 {% block 'body' %}
 
-{% if username%}
-    <h1 style="margin-top: 100px">WELCOME, {{username}}</h1>
+<form 
+    action="{% url 'index' %}"
+    method="POST"
+    style="position: absolute; top: 30px; right: 100px" />
+    {% csrf_token %}
+    
+    {% if username%}
+        <input class="btn_cadastrar" type="submit" value="Log Out">
+    {% endif %}
+
+</form>
+
+{% if username %}
+    <h1 style="margin-top: 100px">Welcome, {{username}}</h1>
 {% else %}
-    <h1 style="margin-top: 100px">WELCOME!</h1>
+    <h1 style="margin-top: 100px">Welcome!</h1>
 {% endif %}
 
 <h4>We will have more pages for you soon!</h4>
 
-<h5><a href="{% url 'signup' %}">Sign up now!</a></h5>
+<h1 style="margin-top: 70px">
+    <a href="{% url 'signup' %}">Sign up now!</a>
+</h1>
 
 {% endblock %}

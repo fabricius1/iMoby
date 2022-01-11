@@ -83,13 +83,16 @@ def login(request):
         else:
             auth.login(request, user)
             return redirect('/')
-                
-        
-        return HttpResponse(f'{username}')
 
 
 def index(request):
-    return render(request, 'index.html')
+    if request.method == "POST":
+        auth.logout(request)
+    
+    if str(request.user).lower() == 'anonymoususer':
+        request.user = ''
+    
+    return render(request, 'index.html', {'username': request.user})
 
 
 ############################
