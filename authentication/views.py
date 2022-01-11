@@ -88,6 +88,10 @@ def login(request):
         return HttpResponse(f'{username}')
 
 
+def index(request):
+    return render(request, 'index.html')
+
+
 ############################
 # 4TH VERSION FOR signup ###
 # returning info from form #

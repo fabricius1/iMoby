@@ -1,5 +1,9 @@
 info.txt
 .myenv
+.env
+__pycache__
+.ipynb_checkpoints
+*.ipynb
 *.pyc
 *.pdf
 *.sqlite3

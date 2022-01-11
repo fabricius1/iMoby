@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+<!doctype html>
+<html lang="en-US">
+
+{% block 'head' %}
+<style>
+    * {
+        text-align: center;
+        color: dark-grey;
+    }
+</style>
+{% endblock %}
+
+{% block 'title' %}
+Home is here!
+{% endblock %}
+
+{% block 'body' %}
+
+{% if username%}
+    <h1 style="margin-top: 100px">WELCOME, {{username}}</h1>
+{% else %}
+    <h1 style="margin-top: 100px">WELCOME!</h1>
+{% endif %}
+
+<h4>We will have more pages for you soon!</h4>
+
+<h5><a href="{% url 'signup' %}">Sign up now!</a></h5>
+
+{% endblock %}
