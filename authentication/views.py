@@ -85,6 +85,11 @@ def login(request):
             return redirect('/')
 
 
+def logout(request):
+    auth.logout(request)
+    return redirect('/auth/login')
+
+
 def index(request):
     if request.method == "POST":
         auth.logout(request)
